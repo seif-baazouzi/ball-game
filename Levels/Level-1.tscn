@@ -29,4 +29,4 @@ position = Vector2( 3008, 512 )
 
 [node name="Door" parent="." instance=ExtResource( 15 )]
 position = Vector2( 4288, 512 )
-level = "Level-2"
+level = "res://Levels/Level-2.tscn"

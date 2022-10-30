@@ -1,6 +1,6 @@
-extends StaticBody2D
+extends Button
 
 export(String, FILE) var level = ""
 
-func goToNextLevel():
+func _on_Button_pressed():
 	get_tree().change_scene(level)
