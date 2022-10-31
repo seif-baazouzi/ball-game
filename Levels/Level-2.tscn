@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Objects/TileSet.tres" type="TileSet" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Objects/Pause.tscn" type="PackedScene" id=3]
+[ext_resource path="res://UI/Pause.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Objects/StaticEnemy.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Objects/RotationEnemy.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Objects/Door.tscn" type="PackedScene" id=15]
