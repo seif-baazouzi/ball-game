@@ -17,10 +17,6 @@ func _ready():
 	VisualServer.set_default_clear_color(Color.lightskyblue)
 
 func _physics_process(delta):
-	handleMovment(delta)
-	handleCollision()
-	
-func handleMovment(delta):
 	velocity.y += GRAVITY * delta
 	
 	if Input.is_action_pressed("ui_up") and is_on_floor():
@@ -36,13 +32,10 @@ func handleMovment(delta):
 		velocity.x = 0
 	
 	velocity = move_and_slide(velocity, Vector2.UP)
-
-func handleCollision():
-	for i in get_slide_count():
-		var collider = get_slide_collision(i).collider
+	
+func _on_Area2D_body_entered(body):
+	if body.is_in_group("enemy"):
+		get_tree().reload_current_scene()
 		
-		if collider.is_in_group("enemy"):
-			get_tree().reload_current_scene()
-		
-		if collider.is_in_group("door"):
-			collider.goToNextLevel()
+	if body.is_in_group("door"):
+		body.goToNextLevel()
