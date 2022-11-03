@@ -9,6 +9,8 @@ radius = 1.37437
 [node name="Player" type="KinematicBody2D"]
 scale = Vector2( 0.4, 0.4 )
 z_index = 1
+collision_layer = 2
+collision_mask = 5
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
@@ -24,6 +26,8 @@ scale = Vector2( 35, 35 )
 shape = SubResource( 1 )
 
 [node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2( 0, -48 )

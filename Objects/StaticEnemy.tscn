@@ -6,6 +6,8 @@
 extents = Vector2( 5, 10 )
 
 [node name="StaticEnemy" type="StaticBody2D" groups=["enemy"]]
+collision_layer = 4
+collision_mask = 0
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 32, -32 )

@@ -6,6 +6,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 
 [node name="Door" type="StaticBody2D" groups=["door"]]
+collision_mask = 0
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
