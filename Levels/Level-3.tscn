@@ -80,5 +80,6 @@ position = Vector2( 1152, -384 )
 [node name="Door" parent="." instance=ExtResource( 15 )]
 position = Vector2( 0, -512 )
 level = "res://Levels.tscn"
+tarntition = false
 
 [node name="Pause" parent="." instance=ExtResource( 4 )]

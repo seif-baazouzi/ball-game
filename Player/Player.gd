@@ -1,5 +1,7 @@
 extends KinematicBody2D
 
+class_name Player
+
 const MOVE: int = 400
 const JUMP: int = 500
 const GRAVITY: int = 600
@@ -7,7 +9,7 @@ const ROTATION: int = MOVE / 60
 
 onready var sprite = $Sprite
 
-var initPostion
+var initPostion: Vector2
 
 var coins: int = 0
 var velocity: Vector2 = Vector2()
@@ -15,7 +17,7 @@ var velocity: Vector2 = Vector2()
 func _ready():
 	initPostion = position
 	VisualServer.set_default_clear_color(Color.lightskyblue)
-
+	
 func _physics_process(delta):
 	velocity.y += GRAVITY * delta
 	
@@ -36,6 +38,3 @@ func _physics_process(delta):
 func _on_Area2D_body_entered(body):
 	if body.is_in_group("enemy"):
 		get_tree().reload_current_scene()
-		
-	if body.is_in_group("door"):
-		body.goToNextLevel()
