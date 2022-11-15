@@ -2,10 +2,10 @@ extends CanvasLayer
 
 onready var popup = $Popup
 
-func _input(event):
-	if event.is_action_pressed("ui_cancel"):
-		popup.visible = true
-		get_tree().paused = true
+func _process(delta):
+	if Input.is_action_just_pressed("ui_cancel"):
+		popup.visible = !popup.visible
+		get_tree().paused = !get_tree().paused
 
 func _on_Resume_pressed():
 	popup.visible = false

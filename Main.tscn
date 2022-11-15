@@ -34,6 +34,7 @@ margin_left = -128.0
 margin_top = -44.0
 margin_bottom = 20.0
 text = "PLAY"
+flat = true
 level = "res://Levels.tscn"
 
 [node name="Quit" type="Button" parent="."]
@@ -46,6 +47,7 @@ margin_top = 84.0
 margin_right = 128.0
 margin_bottom = 148.0
 text = "Quit"
+flat = true
 script = ExtResource( 2 )
 
 [connection signal="pressed" from="Quit" to="Quit" method="_on_Quit_pressed"]
