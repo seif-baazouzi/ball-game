@@ -33,6 +33,10 @@ LevelTrantition="*res://Levels/LevelTrantition.tscn"
 
 enabled=PoolStringArray(  )
 
+[global]
+
+theme=false
+
 [gui]
 
 common/drop_mouse_on_gui_input_disabled=true
